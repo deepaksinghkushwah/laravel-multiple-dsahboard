@@ -31,7 +31,7 @@ Route::middleware([
 Route::middleware('role:admin')->prefix("admin")->group(function () {
     Route::get("dashboard", function(){
         return view("admin.dashboard");
-    })->name("admin.dashboard");
+    })->name("dashboard");
 
     Route::get("posts", function(){
         return view("admin.post.index");
