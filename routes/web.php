@@ -24,14 +24,14 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
-    })->name('user.dashboard');
+    })->name('dashboard');
 });
 
 
 Route::middleware('role:admin')->prefix("admin")->group(function () {
     Route::get("dashboard", function(){
         return view("admin.dashboard");
-    })->name("dashboard");
+    })->name("admin.dashboard");
 
     Route::get("posts", function(){
         return view("admin.post.index");
